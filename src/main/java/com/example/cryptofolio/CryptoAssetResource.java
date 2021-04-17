@@ -19,17 +19,16 @@ public class CryptoAssetResource {
 
     @GetMapping("/{symbol}")
     CryptoAsset get(@PathVariable String symbol){
-        return cryptoAssetRepository.findById(symbol).get();
-    }
-
-    /*@Autowired
-    RestTemplate restTemplate;
-
-    @GetMapping("/{symbol}")
-    CryptoAsset get(@PathVariable String symbol){
         CryptoAsset cryptoAsset= cryptoAssetRepository.findById(symbol).get();
         cryptoAsset.setPrice(restTemplate.getForObject("https://api.binance.com/api/v3/ticker/24hr?symbol="+symbol+"USDT",BinanceTicker.class).getLastPrice());
         return cryptoAsset;
-    }*/
+    }
+
+    /* Pour la version client
+    @GetMapping("/{symbol}")
+    CryptoAsset get(@PathVariable String symbol){
+        return cryptoAssetRepository.findById(symbol).get();
+    }
+*/
 
 }
