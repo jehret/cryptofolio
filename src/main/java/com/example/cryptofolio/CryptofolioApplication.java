@@ -2,8 +2,6 @@ package com.example.cryptofolio;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 public class CryptofolioApplication {
@@ -12,9 +10,11 @@ public class CryptofolioApplication {
 		SpringApplication.run(CryptofolioApplication.class, args);
 	}
 
+	/* Pour la version serveur
+
 	@Bean
 	RestTemplate getRestTemplate(){
 		return new RestTemplate();
-	}
+	}*/
 
 }
